@@ -10,7 +10,7 @@ function App() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch("https://602e7c2c4410730017c50b9d.mockapi.io/users")
+    fetch("https://jsonplaceholder.typicode.com/users")
       .then((res) => res.json())
       .then((data) => {
         setUsers(data);
@@ -42,9 +42,9 @@ function App() {
               <span className="ts">USERS LIST</span>
             </li>
             {users.slice().reverse().map((user) => (
-              <li key={user.profile.username} onClick={() => handleUserSelection(user)}>
-                <img className="img1" src={user.avatar?user.avatar:imgf} alt="" />
-                <span>{user.profile.username}</span>
+              <li key={user.id} onClick={() => handleUserSelection(user)}>
+                <img className="img1" src={imgf} alt="" />
+                <span>{user.username}</span>
               </li>
             ))}
           </ul>
@@ -57,20 +57,20 @@ function App() {
           <div className="tl">
             <p className="ts">USER DETAILS</p>
           </div>
-          <img className="img2" src={selectedUser.avatar} alt="" />
-          <p className="un">@{selectedUser.profile.username}</p>
-          <div className="bio">{selectedUser.Bio}</div>
+          <img className="img2" src={imgf} alt="" />
+          <p className="un">@{selectedUser.username}</p>
+          <div className="bio">{selectedUser.website}</div>
           <div className="name">
             <p className="title">Full Name</p>
-            <div className="con">{selectedUser.profile.firstName + "  " + selectedUser.profile.lastName}</div>
+            <div className="con">{selectedUser.name}</div>
           </div>
           <div className="name">
-            <p className="title">Job Title</p>
-            <div className="con">{selectedUser.jobTitle}</div>
+            <p className="title">Phone Number</p>
+            <div className="con">{selectedUser.phone}</div>
           </div>
           <div className="name">
             <p className="title">Email</p>
-            <div className="con">{selectedUser.profile.email}</div>
+            <div className="con">{selectedUser.email}</div>
           </div>
         </div>
       )}
