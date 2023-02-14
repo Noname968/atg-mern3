@@ -1,38 +1,113 @@
-.App {
-  text-align: center;
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  height: 100vh;
+  overflow: hidden;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.list-container {
+  overflow-y: auto;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+li,
+.tl {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 8px 10px;
+  gap: 10px;
+  background: #ececec;
+  border-radius: 4px;
+  margin: 15px;
+  width: 500px;
+  height: 60px;
+  cursor: pointer;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.img1 {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  margin: 0 10px;
+}
+span,
+.ts {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 29px;
+}
+/* li:active{
+  background: #D5D5D5;
+} */
+.tl {
+  background: #c5dfff;
+  justify-content: center;
+}
+.details-container {
   display: flex;
   flex-direction: column;
+  /* border: 1px solid black; */
+  margin: 0 25px 0 0;
+  height: fit-content;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+.img2 {
+  width: 128px;
+  height: 128px;
+  border-radius: 50%;
+}
+.un {
+  height: 22px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 19px;
+  line-height: 22px;
+  text-align: center;
+}
+.bio {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 8px;
+  width: 304px;
+  /* height: 87px; */
+  left: 99px;
+  top: 295px;
+  background: #dbdbdb;
+  border: 1px solid #6c6c6c;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+.name {
+  width: 304px;
+  margin-bottom: 12px;
+}
+.title {
+  margin: 3px 0;
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 12px;
+}
+.con {
+  font-size: 12px;
+  padding: 8px;
+  background: #dbdbdb;
+  border: 1px solid #6c6c6c;
+  border-radius: 4px;
 }
 
-.App-link {
-  color: #61dafb;
+::-webkit-scrollbar {
+  width: 5px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+::-webkit-scrollbar-thumb {
+  background: #31353d;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+  box-shadow: inset 0 0 6px rgba(213, 206, 206, 0.3);
 }
